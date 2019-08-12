@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/plugins/multiple_layers_edit" >
+        <file>multiple_layers_edit.png</file>
+        <file>multiple_layers_undo.png</file>
+        <file>multiple_layers_commit.png</file>
+    </qresource>
+</RCC>
