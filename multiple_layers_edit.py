@@ -114,7 +114,7 @@ class MultipleLayersEdit:
         """Run method that performs all the real work"""
           
         # selected layers
-        selectedLayers = iface.layerTreeView().selectedLayers()
+        selectedLayers = iface.layerTreeView().selectedLayersRecursive()
         for layer in selectedLayers:
             layer.startEditing()
             layer.triggerRepaint()
@@ -123,7 +123,7 @@ class MultipleLayersEdit:
         """Run method that performs all the real work"""
           
         # selected layers
-        selectedLayers = iface.layerTreeView().selectedLayers()
+        selectedLayers = iface.layerTreeView().selectedLayersRecursive()
         for layer in selectedLayers:
             layer.commitChanges()
             layer.triggerRepaint()
@@ -132,7 +132,7 @@ class MultipleLayersEdit:
         """Run method that performs all the real work"""
           
         # selected layers
-        selectedLayers = iface.layerTreeView().selectedLayers()
+        selectedLayers = iface.layerTreeView().selectedLayersRecursive()
         for layer in selectedLayers:
             layer.rollBack()
             layer.triggerRepaint()
