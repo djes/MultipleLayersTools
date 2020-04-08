@@ -3,5 +3,7 @@
         <file>multiple_layers_edit.png</file>
         <file>multiple_layers_undo.png</file>
         <file>multiple_layers_commit.png</file>
+        <file>multiple_layers_filter.png</file>
+        <file>multiple_layers_clearfilter.png</file>
     </qresource>
 </RCC>
