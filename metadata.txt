@@ -29,7 +29,7 @@ homepage=https://github.com/djes/MultipleLayersEdit
 category=Plugins
 icon=multiple_layers_edit.png
 # experimental flag
-experimental=True
+experimental=false
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
