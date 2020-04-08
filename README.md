@@ -1,2 +1,2 @@
 # qgis-multiple-layers-edit
-Toolbar to turn on edit mode, commit and undo changes for selected layers. Works on groups too.
+Add buttons to turn on edit mode, commit, undo, change filter on selected layers and groups.

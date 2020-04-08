@@ -5,12 +5,12 @@
 [general]
 name=Multiple Layers Edit
 qgisMinimumVersion=3.0
-description=Multiple Layers Edit, Commit and Undo changes for QGIS. 
-version=0.1
+description=Multiple Layers Edit, Commit, Undo, Filter and Clear filter for QGIS. 
+version=0.3
 author=djes
 email=djes@free.fr
 
-about= Add buttons allowing to turn on edit mode, commit and undo changes for selected layers.
+about=Add buttons to turn on edit mode, commit, undo, filter selected layers.
 
 tracker=https://github.com/djes/MultipleLayersEdit/issues
 repository=https://github.com/djes/MultipleLayersEdit
