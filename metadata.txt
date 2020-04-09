@@ -6,11 +6,11 @@
 name=Multiple Layers Edit
 qgisMinimumVersion=3.0
 description=Multiple Layers Edit, Commit, Undo, Filter and Clear filter for QGIS. 
-version=0.3
+version=0.31
 author=djes
 email=djes@free.fr
 
-about=Add buttons to turn on edit mode, commit, undo, filter selected layers.
+about=Add buttons to turn on edit mode, commit, undo, filter multiple selected layers and groups.
 
 tracker=https://github.com/djes/MultipleLayersEdit/issues
 repository=https://github.com/djes/MultipleLayersEdit
@@ -29,7 +29,7 @@ homepage=https://github.com/djes/MultipleLayersEdit
 category=Plugins
 icon=multiple_layers_edit.png
 # experimental flag
-experimental=false
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
