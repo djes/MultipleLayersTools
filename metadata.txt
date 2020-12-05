@@ -3,17 +3,25 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Multiple Layers Edit
+name=Multiple Layers Tools
 qgisMinimumVersion=3.0
-description=Multiple Layers Edit, Commit, Undo, Filter and Clear filter for QGIS. 
-version=0.31
+description=Multiple Layers Tools, like Edit, Commit, Undo, Filter and Clear filter.
+ 
+ (fr) Outils multicouches : éditer, enregistrer, annuler, filtrer et effacer les filtres.
+version=1.00
 author=djes
 email=djes@free.fr
 
-about=Add buttons to turn on edit mode, commit, undo, filter multiple selected layers and groups.
+about=Toolbar to facilitate work on several layers and groups :
+ - To turn on edit mode, to commit, to undo with only one click. Easy to edit points without switching layer. Easy to modify several layers.
+ - To create a filter by using the first of selected layer fields (alphabetical order). Note that the query is not checked so you're free to use other fields coming from other layers. Easy to work on linked entities with a common field.
+  
+ (fr) Ajoute une barre d'outils pour faciliter le travail sur plusieurs couches et groupes :
+ - Activer le mode édition, enregistrer, annuler en un clic. Pratique pour éditer les points sans changer de couche. Pratique pour modifier plusieurs couches d'un coup.
+ - Créer un filtre en utilisant les champs de la première couche sélectionnée (ordre alphabétique). Notez que la requête n'est pas vérifiée, vous pouvez donc utiliser d'autres champs venant d'autres couches. Pratique pour travailler sur des entités liées par un champ commun.
 
-tracker=https://github.com/djes/MultipleLayersEdit/issues
-repository=https://github.com/djes/MultipleLayersEdit
+tracker=https://github.com/djes/MultipleLayersTools/issues
+repository=https://github.com/djes/MultipleLayersTools
 # End of mandatory metadata
 
 # Recommended items:
@@ -23,11 +31,11 @@ hasProcessingProvider=no
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=python, qgis, layers, edit
+tags=python, qgis, layers, edit, filter
 
-homepage=https://github.com/djes/MultipleLayersEdit
+homepage=https://github.com/djes/MultipleLayersTools
 category=Plugins
-icon=multiple_layers_edit.png
+icon=multiple_layers_tools.png
 # experimental flag
 experimental=False
 

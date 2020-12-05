@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/plugins/multiple_layers_edit" >
+    <qresource prefix="/plugins/multiple_layers_tools" >
         <file>multiple_layers_edit.png</file>
         <file>multiple_layers_undo.png</file>
         <file>multiple_layers_commit.png</file>
