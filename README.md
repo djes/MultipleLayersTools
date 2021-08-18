@@ -1,4 +1,5 @@
 # qgis-multiple-layers-tools
+Plugin URL : https://plugins.qgis.org/plugins/multiple_layers_tools/
 This plugin simplifies work on projects with a lot of layers. It allows the following on all selected layers and groups :
 
 * ![Edit](multiple_layers_edit.png) To turn on edit mode. You can then point edit without switching between layers.
