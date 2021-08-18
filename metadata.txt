@@ -5,20 +5,22 @@
 [general]
 name=Multiple Layers Tools
 qgisMinimumVersion=3.0
-description=Multiple Layers Tools, like Edit, Commit, Undo, Filter and Clear filter.
+description=Multiple Layers Tools, like Edit, Commit, Undo, Filter, Clear filter and Load styles from DB.
  
- (fr) Outils multicouches : éditer, enregistrer, annuler, filtrer et effacer les filtres.
+ (fr) Outils multicouches : éditer, enregistrer, annuler, filtrer, effacer les filtres, charger les styles depuis la base de données.
 version=1.2
 author=djes
 email=djes@free.fr
 
 about=Toolbar to facilitate work on several layers and groups :
- - To turn on edit mode, to commit, to undo with only one click. Easy to edit points without switching layer. Easy to modify several layers.
+ - To turn on edit mode, to commit, to undo with only one click. Easy to edit points without switching layer. Easy to modify several layers. 
  - To create a filter by using the first of selected layer fields (alphabetical order). Note that the query is not checked so you're free to use other fields coming from other layers. Easy to work on linked entities with a common field.
+ - To load styles from selected layers from DB.
   
  (fr) Ajoute une barre d'outils pour faciliter le travail sur plusieurs couches et groupes :
  - Activer le mode édition, enregistrer, annuler en un clic. Pratique pour éditer les points sans changer de couche. Pratique pour modifier plusieurs couches d'un coup.
  - Créer un filtre en utilisant les champs de la première couche sélectionnée (ordre alphabétique). Notez que la requête n'est pas vérifiée, vous pouvez donc utiliser d'autres champs venant d'autres couches. Pratique pour travailler sur des entités liées par un champ commun.
+ - Pour charger les styles des couches sélectionnées depuis la base de données.
 
 tracker=https://github.com/djes/MultipleLayersTools/issues
 repository=https://github.com/djes/MultipleLayersTools
