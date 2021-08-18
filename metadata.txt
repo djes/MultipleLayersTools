@@ -8,7 +8,7 @@ qgisMinimumVersion=3.0
 description=Multiple Layers Tools, like Edit, Commit, Undo, Filter and Clear filter.
  
  (fr) Outils multicouches : éditer, enregistrer, annuler, filtrer et effacer les filtres.
-version=1.1
+version=1.2
 author=djes
 email=djes@free.fr
 

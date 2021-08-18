@@ -5,5 +5,6 @@
         <file>multiple_layers_commit.png</file>
         <file>multiple_layers_filter.png</file>
         <file>multiple_layers_clearfilter.png</file>
+        <file>multiple_layers_loadstyles.png</file>
     </qresource>
 </RCC>

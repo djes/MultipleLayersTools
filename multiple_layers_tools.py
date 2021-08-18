@@ -28,8 +28,9 @@ from PyQt5.QtCore import (  QSettings,
                             QCoreApplication,
                             QVariant)
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QAction
+from PyQt5.QtWidgets import QAction, QMessageBox
 from qgis.core import QgsProject, QgsLayerTreeLayer, QgsVectorLayer
+from qgis.PyQt.QtXml import QDomDocument
 from qgis.utils import iface
 from qgis.gui import QgsQueryBuilder
 
@@ -106,14 +107,16 @@ class MultipleLayersTools:
         self.action_undo        = QAction(QIcon(icon_path + 'multiple_layers_undo.png'), self.tr(u'Undo selected layers and groups'), self.iface.mainWindow())
         self.action_filter      = QAction(QIcon(icon_path + 'multiple_layers_filter.png'), self.tr(u'Filter selected layers and groups'), self.iface.mainWindow())
         self.action_clearfilter = QAction(QIcon(icon_path + 'multiple_layers_clearfilter.png'), self.tr(u'Clear selected layers and groups filters'), self.iface.mainWindow())
+        self.action_loadstyles  = QAction(QIcon(icon_path + 'multiple_layers_loadstyles.png'), self.tr(u'Load selected layers styles from DB'), self.iface.mainWindow())
 
         self.action_edit.triggered.connect(self.run_edit)
         self.action_commit.triggered.connect(self.run_commit)
         self.action_undo.triggered.connect(self.run_undo)        
         self.action_filter.triggered.connect(self.run_filter)
         self.action_clearfilter.triggered.connect(self.run_clearfilter)
+        self.action_loadstyles.triggered.connect(self.run_loadstyles)
 
-        self.toolbar.addActions([self.action_edit, self.action_commit, self.action_undo, self.action_filter, self.action_clearfilter])
+        self.toolbar.addActions([self.action_edit, self.action_commit, self.action_undo, self.action_filter, self.action_clearfilter, self.action_loadstyles])
 
     def unload(self):
         del self.toolbar
@@ -191,3 +194,28 @@ class MultipleLayersTools:
         for layer in selectedLayers:
             layer.setSubsetString('')
             layer.triggerRepaint()
+            
+    def run_loadstyles(self):
+        """Run method that performs loading layers styles from DB"""
+        selectedLayers = iface.layerTreeView().selectedLayersRecursive()
+        message = self.tr(u'Styles trouvés :\n\n')
+        for layer in selectedLayers:
+            if isinstance(layer, QgsVectorLayer):
+                listedStyles = layer.listStylesInDatabase()
+                numberOfStyles = listedStyles[0]
+                if numberOfStyles > 0:
+                    message = message + layer.name() + '\n'
+                    defaultStyleId = listedStyles[1][0]
+                    # defaultStyleName = listedStyles[2][0]
+                    # defaultStyleDate = listedStyles[3][0]
+                    styledoc = QDomDocument()
+                    styleTuple = layer.getStyleFromDatabase(defaultStyleId)
+                    styleqml = styleTuple[0]
+                    styledoc.setContent(styleqml)
+                    layer.importNamedStyle(styledoc)
+                    layer.triggerRepaint()
+                    
+        if message == '':
+            message = self.tr(u'No style found.')
+        
+        QMessageBox.information(None, self.tr(u'Information'), message)
