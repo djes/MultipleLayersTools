@@ -15,7 +15,7 @@ email=djes@free.fr
 about=Toolbar to facilitate work on several layers and groups :
  - To turn on edit mode, to commit, to undo with only one click. Easy to edit points without switching layer. Easy to modify several layers. 
  - To create a filter by using the first of selected layer fields (alphabetical order). Note that the query is not checked so you're free to use other fields coming from other layers. Easy to work on linked entities with a common field.
- - To load styles from selected layers from DB.
+ - To load selected layers styles from DB.
   
  (fr) Ajoute une barre d'outils pour faciliter le travail sur plusieurs couches et groupes :
  - Activer le mode édition, enregistrer, annuler en un clic. Pratique pour éditer les points sans changer de couche. Pratique pour modifier plusieurs couches d'un coup.
